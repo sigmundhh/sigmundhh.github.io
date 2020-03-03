@@ -16,8 +16,12 @@ if (window.DeviceMotionEvent == undefined) {
 }
 else {
   alert("accelerometer found");
-  window.addEventListener("devicemotion", accelerometerUpdate, true);
+  window.addEventListener("devicemotion", accelerometerUpdate, true)
+  // Set acc_angle to be what it is now? Or just have an offset? 
+  // Acc_angle seems to be the angle of the downward acceleration, we should maybe have an offset
+  // acc_angle = 
 }
+
 
 
 function accelerometerUpdate() {
