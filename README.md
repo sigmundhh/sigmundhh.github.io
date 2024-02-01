@@ -1,2 +1,1 @@
-# sigmundhh.github.io
-For github pages. Created for learning more about web programming, hopefully something about Javascript as well.
+This is the source code to Jon Barron's public academic website: https://jonbarron.info/. Feel free to clone this code for your own personal use.
