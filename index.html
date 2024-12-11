@@ -53,7 +53,32 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-
+    <tr>
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='streaming_diffusion'>
+            <video width="100%" loop muted playsinline id="streamingVideo">
+              <source src="streaming_diffusion_policy/tedi_ta1_alpha05_highres.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://streaming-diffusion-policy.github.io/">
+          <span class="papertitle">Streaming Diffusion Policy: Fast Policy Synthesis with Variable Noise Diffusion Models</span>
+        </a>
+        <br>
+        <strong>Sigmund Hennum Høeg</strong>,
+        <a href="https://yilundu.github.io/">Yilun Du</a>,
+        <a href="https://www.ntnu.edu/employees/olav.egeland">Olav Egeland</a>
+        <br>
+        <em>Preprint</em>, 2024
+        
+        <p>
+        Introduction of a fast diffusion-based robotic control policy. The method enables real-time robot control while maintaining the quality of diffusion-based policies, demonstrating strong performance across various robotic manipulation tasks.
+        </p>
+      </td>
+    </tr>
 
     <tr>
       <td style="padding:20px;width:25%;vertical-align:middle">
@@ -120,6 +145,18 @@
       document.getElementById('master_thesis_img').onmouseout = function() {
         clearInterval(imageInterval); // Stop rotating when not hovering
         document.getElementById('rotatingImage').src = 'master_thesis/1.png'; // Reset to first image
+      }
+    </script>
+    <script type="text/javascript">
+      const video = document.getElementById('streamingVideo');
+      
+      document.getElementById('streaming_diffusion').onmouseover = function() {
+        video.play();
+      }
+      
+      document.getElementById('streaming_diffusion').onmouseout = function() {
+        video.pause();
+        video.currentTime = 0; // Reset to start
       }
     </script>
   </body>
