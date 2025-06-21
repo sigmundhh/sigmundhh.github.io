@@ -48,4 +48,4 @@ x_username: sigmundhh # your X handle
 custom_social: # can be any name here other than the ones already defined above
   logo: https://img.icons8.com/ios/50/000000/resume.png # can be png, svg, jpg
   title: CV
-  url: assets/Resume_Latex_V25.pdf
+  url: assets/pdf/cv.pdf
