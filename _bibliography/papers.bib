@@ -1,0 +1,88 @@
+---
+---
+
+
+
+@inproceedings{hoeg2025hybrid,
+  abbr={RSS Workshop},
+  bibtex_show={true},
+  title={Hybrid Diffusion for Simultaneous Symbolic and Continuous Planning},
+  author={Høeg, Sigmund Hennum and Vaaler, Aksel and Liu, Chaoqi and Egeland, Olav and Du, Yilun},
+  booktitle={2nd Workshop on Semantic Reasoning and Goal Understanding in Robotics (SemRob) at Robotics Science and Systems Conference (RSS 2025)},
+  year={2025},
+  selected={true},
+  website={https://hybrid-diffusion.github.io/},
+  preview={hybrid-diffusion-planning.png},
+  abstract={Constructing robots to accomplish long-horizon tasks is a long-standing challenge within artificial intelligence. Approaches using generative methods, particularly Diffusion Models, have gained attention due to their ability to model continuous robotic trajectories for planning and control. However, we show that these models struggle with long-horizon tasks that involve complex decision-making and, in general, are prone to confusing different modes of behavior, leading to failure. To remedy this, we propose to augment continuous trajectory generation by simultaneously generating a high-level symbolic plan. We show that this requires a novel mix of discrete variable diffusion and continuous diffusion, which dramatically outperforms the baselines. In addition, we illustrate how this hybrid diffusion process enables flexible trajectory synthesis, allowing us to condition synthesized actions on partial and complete discrete conditions.}
+}
+
+@inproceedings{vaaler2025noisybct,
+  abbr={Under Review},
+  bibtex_show={true},
+  title={NoisyBCT: Robust and Reactive Imitation Learning from Image Sequences},
+  author={Vaaler, Aksel and Høeg, Sigmund Hennum and Stige, Helle and Holden, Christian},
+  year={2025},
+  note={Under review},
+  website={https://noisy-bct.github.io/},
+  selected={true},
+  preview={noisy_bct.png},
+  abstract={Robotic imitation learning (IL) in dynamic environments—where object positions or external forces change unpredictably—poses a major challenge for current state-of-the-art methods. These methods often rely on multi-step, open-loop action execution for temporal consistency, but this approach hinders reactivity and adaptation under dynamic conditions. We propose Noise Augmented Behavior Cloning Transformer (NoisyBCT), a robust and responsive IL method that predicts single-step actions based on a sequence of past image observations. To mitigate the susceptibility to covariate shift that arises from longer observation horizons, NoisyBCT injects adversarial noise into low-dimensional spatial image embeddings during training. This enhances robustness to out-of-distribution states while preserving semantic content. We evaluate NoisyBCT on three simulated manipulation tasks and one real-world task, each featuring dynamic disturbances. NoisyBCT consistently outperforms the vanilla BC Transformer and the state-of-the-art Diffusion Policy across all environments. Our results demonstrate that NoisyBCT enables both temporally consistent and reactive policy learning for dynamic robotic tasks.}
+}
+
+@inproceedings{liu2025factorized,
+  abbr={RSS Workshop},
+  bibtex_show={true},
+  title={Flexible Multitask Learning with Factorized Diffusion Policy},
+  author={Liu, Chaoqi and Chen, Haonan and Høeg, Sigmund Hennum and Yao, Shaoxiong and Li, Yunzhu and Hauser, Kris and Du, Yilun},
+  booktitle={2nd Workshop on Semantic Reasoning and Goal Understanding in Robotics (SemRob) at Robotics Science and Systems Conference (RSS 2025)},
+  year={2025},
+  note={Spotlight},
+  website={https://factorized-diffusion-policy.github.io/},
+  selected={true},
+  preview={FDP-preview.png},
+  abstract={In recent years, large-scale behavioral cloning has emerged as a promising paradigm for training general-purpose robot policies. However, effectively fitting policies to complex task distributions is often challenging, and existing models often underfit the action distribution. In this paper, we present a novel modular diffusion policy framework that factorizes modeling the complex action distributions as a composition of specialized diffusion models, each capturing a distinct sub-mode of the multimodal behavior space. This factorization enables each composed model to specialize and capture a subset of the task distribution, allowing the overall task distribution to be more effectively represented. In addition, this modular structure enables flexible policy adaptation to new tasks by simply fine-tuning a subset of components or adding new ones for novel tasks, while inherently mitigating catastrophic forgetting. Empirically, across both simulation and real-world robotic manipulation settings, we illustrate how our method consistently outperforms strong modular and monolithic baselines, achieving a 24% average relative improvement in multitask learning and a 34% improvement in task adaptation across all settings.}
+}
+
+@inproceedings{hoeg2025streaming,
+  abbr={ICRA},
+  bibtex_show={true},
+  title={Streaming Diffusion Policy: Fast Policy Synthesis with Variable Noise Diffusion Models},
+  author={Høeg, Sigmund Hennum and Du, Yilun and Egeland, Olav},
+  booktitle={2025 IEEE International Conference on Robotics and Automation (ICRA)},
+  year={2025},
+  organization={IEEE},
+  selected={true},
+  preview={streaming-diffusion-policy.png},
+  website={https://streaming-diffusion-policy.github.io/},
+  abstract={Introduction of a fast diffusion-based robotic control policy. The method enables real-time robot control while maintaining the quality of diffusion-based policies, demonstrating strong performance across various robotic manipulation tasks.}
+}
+
+@inproceedings{hoeg2022more,
+  abbr={CoRL Workshop},
+  bibtex_show={true},
+  title={More than eleven thousand words: Towards using language models for robotic sorting of unseen objects into arbitrary categories},
+  author={Høeg, Sigmund Hennum and Tingelstad, Lars},
+  booktitle={Workshop on Language and Robotics at Conference on Robot Learning (CoRL)},
+  year={2022},
+  selected={true},
+  preview={more_than_11k_words.jpeg},
+  website={https://openreview.net/forum?id=ngaOl34ycz},
+  abstract={Analyzing the performance of language models on sorting unseen objects into arbitrary categories. Measuring performance metrics, and discussing failure modes.}
+}
+
+@thesis{hoeg2022learning,
+  abbr={Master's Thesis},
+  bibtex_show={true},
+  title={Learning to grasp: A study of learning-based methods for robotic grasping},
+  author={Høeg, Sigmund Hennum},
+  school={Norwegian University of Science and Technology (NTNU)},
+  year={2022},
+  type={Master's thesis},
+  selected={true},
+  preview={master_thesis.png},
+  website={https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/3024845},
+  abstract={A study of Reinforcement Learning methods for robotic grasping. We compare the performance of different methods, and discuss the challenges of applying RL algorithms to robotic grasping. Using Robosuite as a simulated benchmark.}
+}
+
+
+
