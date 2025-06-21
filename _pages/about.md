@@ -24,11 +24,11 @@ I'm a Ph.D. graduate at the <a href='https://www.ntnu.edu/mtp/staff/robotics-and
 My research centers around **Imitation Learning**, specifically the use of **Flow- and Diffusion Models** for robotic planning and control. While these methods are powerful out of the box, important and interesting challenges arise when we apply these models to robots. I've worked on models that enhance prediction speed and enable more complex, long-horizon planning.
 
 My most recent work includes:
-- **Streaming Diffusion Policy** *(ICRA 2025)*: A novel inference paradigm for diffusion-based policies for robotic visuomotor control. 
-- **Hybrid Diffusion Planning** *(Under review)*: A diffusion-based planner that achieves significantly higher success rates on long-horizon tasks than baselines by concurrently constructing a high-level symbolic plan.
+
+- **Streaming Diffusion Policy** _(ICRA 2025)_: A novel inference paradigm for diffusion-based policies for robotic visuomotor control.
+- **Hybrid Diffusion Planning** _(Under review)_: A diffusion-based planner that achieves significantly higher success rates on long-horizon tasks than baselines by concurrently constructing a high-level symbolic plan.
 
 In addition, I have collaborated on several other research projects. I'm currently finishing my Ph.d. thesis, so if my experience seems interesting, please reach out to me!
-
 
 ## Background
 
