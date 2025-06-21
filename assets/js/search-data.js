@@ -56,7 +56,7 @@ ninja.data = [{
         title: 'Custom_social',
         section: 'Socials',
         handler: () => {
-          window.open("assets/Resume_Latex_V25.pdf", "_blank");
+          window.open("assets/pdf/cv.pdf", "_blank");
         },
       },{
       id: 'light-theme',
