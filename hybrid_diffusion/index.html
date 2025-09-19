@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Hybrid Diffusion Planning: Combining continuous trajectory generation with discrete symbolic planning for robust robotic control.">
+  <meta name="keywords" content="Hybrid Diffusion Planning, Robotics, Diffusion Models, Planning, Control">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hybrid Diffusion for Simultaneous Symbolic and Continuous Planning</title>
+
+  <!--FACEBOOK-->
+  <meta property="og:image" content="./img/share_image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1196">
+  <meta property="og:image:height" content="705">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sigmundhh.com/hybrid_diffusion/"/>
+  <meta property="og:title" content="Hybrid Diffusion Planning" />
+  <meta property="og:description"
+      content="Project page for Hybrid Diffusion Planning." />
+
+  <!--TWITTER-->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hybrid Diffusion Planning" />
+  <meta name="twitter:description"
+      content="Project page for Hybrid Diffusion Planning" />
+  <meta name="twitter:image" content="./img/share_image.png" />
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  
+  <style>
+    .gradient-text {
+      background: linear-gradient(90deg, #80BEDA, #A02B93);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation removed for anonymous submission -->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><span class="gradient-text">Hybrid Diffusion</span> for Simultaneous Symbolic and Continuous Planning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://sigmundhh.com">Sigmund H. Høeg</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.ntnu.edu/employees/aksel.vaaler">Aksel Vaaler</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://chaoqi-liu.com/">Chaoqi Liu</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.ntnu.edu/employees/olav.egeland">Olav Egeland</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yilundu.github.io/">Yilun Du</a><sup>3</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Department of Mechanical and Industrial Engineering, Norwegian University of Science and Technology (NTNU)</span><br>
+            <span class="author-block"><sup>2</sup>University of Illinois Urbana-Champaign</span><br>
+            <span class="author-block"><sup>3</sup>Harvard University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Code Link -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                </a>
+              </span>
+              <!-- arXiv Link -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="img/Teaser.png" alt="Teaser" style="width: 100%; max-width: 800px;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Hybrid Diffusion Planning</span> combines continuous trajectory generation with discrete symbolic planning for robust robotic control.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Constructing robots to accomplish long-horizon tasks is a long-standing challenge within artificial intelligence. Approaches using generative methods, particularly Diffusion Models, have gained attention due to their ability to model continuous robotic trajectories for planning and control. However, we show that these models struggle with long-horizon tasks that involve complex decision-making and, in general, are prone to confusing different modes of behavior, leading to failure.
+          </p>
+          <p>
+            To remedy this, we propose to augment continuous trajectory generation by simultaneously generating a high-level symbolic plan. We show that this requires a novel mix of discrete variable diffusion and continuous diffusion, which dramatically outperforms the baselines. In addition, we illustrate how this hybrid diffusion process enables flexible trajectory synthesis, allowing us to condition synthesized actions on partial and complete discrete conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Comparison: Trajectory-only vs Hybrid Diffusion</h2>
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="content has-text-centered">
+            <video controls style="width: 100%;">
+              <source src="videos/Diffuser denoising and execution.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <h4 class="title is-5">Trajectory-only Diffusion</h4>
+            <p>Struggles with long-horizon decision making tasks, mixing behaviors in the dataset.</p>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="content has-text-centered">
+            <video controls style="width: 100%;">
+              <source src="videos/Denoising_and _execution_hybrid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <h4 class="title is-5">Hybrid Diffusion Planning</h4>
+            <p>Shows remarkable ability to solve complex tasks by combining symbolic planning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Simulated Tasks</h2>
+        
+        <div class="columns">
+          <div class="column is-one-third">
+            <div class="content has-text-centered">
+              <video controls style="width: 100%;">
+                <source src="videos/hybrid_xarm_sorting_compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <h4 class="title is-5">X-Arm Sorting</h4>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="content has-text-centered">
+              <video controls style="width: 100%;">
+                <source src="videos/hybrid_xarm_pick_place_compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <h4 class="title is-5">Arrange Blocks</h4>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="content has-text-centered">
+              <video controls style="width: 100%;">
+                <source src="videos/hook_rollout.webm" type="video/webm">
+                Your browser does not support the video tag.
+              </video>
+              <h4 class="title is-5">Hook Task</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Table -->
+        <div class="columns is-centered">
+          <div class="column is-three-quarters">
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>X-Arm Sorting</th>
+                  <th>Arrange Blocks</th>
+                  <th>Hook Task</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Diffuser</td>
+                  <td>46%</td>
+                  <td>67%</td>
+                  <td>38%</td>
+                </tr>
+                <tr>
+                  <td>Joint Diffuser</td>
+                  <td>41%</td>
+                  <td>61%</td>
+                  <td>48%</td>
+                </tr>
+                <tr>
+                  <td>Separate Diffuser</td>
+                  <td>38%</td>
+                  <td>62%</td>
+                  <td>43%</td>
+                </tr>
+                <tr class="has-background-success-light">
+                  <td><strong>Hybrid (Ours)</strong></td>
+                  <td><strong>83%</strong></td>
+                  <td><strong>74%</strong></td>
+                  <td><strong>60%</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Scalability Analysis</h2>
+        <div class="content has-text-justified">
+          <p>
+            In addition to experimental benchmarks, we measure the robustness of all methods as task complexity increases by varying the number of blocks to sort. We find that Hybrid Diffusion Planning is significantly stronger than the baselines.
+          </p>
+        </div>
+        
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <img src="img/bar_plot.png" alt="Bar Plot" style="width: 100%;">
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column is-one-third">
+            <div class="content has-text-centered">
+              <video controls style="width: 100%;">
+                <source src="videos/Hybrid_2_block_execution.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <h5 class="title is-6">2 Blocks</h5>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="content has-text-centered">
+              <video controls style="width: 100%;">
+                <source src="videos/hybrid_3_block_execution.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <h5 class="title is-6">3 Blocks</h5>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="content has-text-centered">
+              <video controls style="width: 100%;">
+                <source src="videos/hybrid_4_block_execution.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <h5 class="title is-6">4 Blocks</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Real-world Evaluation</h2>
+        
+        <div class="columns">
+          <div class="column is-half">
+            <div class="content has-text-centered">
+              <video controls style="width: 100%;">
+                <source src="videos/real_sorting_compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <h4 class="title is-5">Real Sorting Task</h4>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="content has-text-centered">
+              <video controls style="width: 100%;">
+                <source src="videos/Real_hook_hybrid_compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <h4 class="title is-5">Real Hook Task</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-world Results Table -->
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Sorting Task</th>
+                  <th>Hook Task</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Diffuser</td>
+                  <td>20%</td>
+                  <td>6.7%</td>
+                </tr>
+                <tr>
+                  <td>Joint Diffuser</td>
+                  <td>10%</td>
+                  <td>10%</td>
+                </tr>
+                <tr>
+                  <td>Separate Diffuser</td>
+                  <td>0%</td>
+                  <td>6.7%</td>
+                </tr>
+                <tr class="has-background-success-light">
+                  <td><strong>Hybrid (Ours)</strong></td>
+                  <td><strong>70%</strong></td>
+                  <td><strong>60%</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- Links will be available after publication -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
