@@ -32,7 +32,10 @@
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
     <link rel="stylesheet" href="./static/css/index.css" />
-    <link rel="icon" href="./static/images/favicon.svg" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%96%3C/text%3E%3C/svg%3E"
+    />
 
     <script defer src="./static/js/fontawesome.all.min.js"></script>
 
@@ -75,6 +78,7 @@
               </div>
 
               <div class="column has-text-centered">
+                <p class="is-size-5" style="margin-bottom: 0.75rem">Accepted to IEEE Robotics and Automation Letters (RA-L)</p>
                 <div class="publication-links">
                   <!-- Code Link -->
                   <span class="link-block">
@@ -400,6 +404,20 @@
         <div class="columns is-centered">
           <div class="column is-8">
             <div class="content">
+              <h4>Citation</h4>
+              <p>
+                <button id="copy-citation-button" class="button is-small is-light" type="button">Copy BibTeX</button>
+              </p>
+              <pre><code id="citation-bibtex">@article{11395608,
+  author={Høeg, Sigmund H. and Vaaler, Aksel and Liu, Chaoqi and Egeland, Olav and Du, Yilun},
+  journal={IEEE Robotics and Automation Letters},
+  title={Hybrid Diffusion for Simultaneous Symbolic and Continuous Planning},
+  year={2026},
+  volume={11},
+  number={4},
+  pages={4489-4496},
+  doi={10.1109/LRA.2026.3664616}}
+</code></pre>
               <p>
                 This website is licensed under a
                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
@@ -416,5 +434,25 @@
         </div>
       </div>
     </footer>
+    <script>
+      (() => {
+        const copyButton = document.getElementById("copy-citation-button");
+        const citation = document.getElementById("citation-bibtex");
+        if (!copyButton || !citation) return;
+
+        copyButton.addEventListener("click", async () => {
+          const originalText = copyButton.textContent;
+          try {
+            await navigator.clipboard.writeText(citation.textContent);
+            copyButton.textContent = "Copied!";
+          } catch (error) {
+            copyButton.textContent = "Copy failed";
+          }
+          setTimeout(() => {
+            copyButton.textContent = originalText;
+          }, 1500);
+        });
+      })();
+    </script>
   </body>
 </html>
