@@ -17,7 +17,7 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 ---
 
-I'm an AI Research Engineer at <a href="https://www.mimicrobotics.com/">mimic robotics</a> developing models for dexterous manipulation. Earlier, I did a Ph.D. at the <a href='https://www.ntnu.edu/mtp/staff/robotics-and-engineering-design'>Robotics and Engineering Design Group</a> at the Norwegian University of Science and Technology (NTNU), where I focused on applying learning methods to robotic planning and control.
+I'm a Senior Research Scientist at <a href="https://sereact.ai/">Sereact</a> developing models for dexterous manipulation. Earlier, I did a Ph.D. at the <a href='https://www.ntnu.edu/mtp/staff/robotics-and-engineering-design'>Robotics and Engineering Design Group</a> at the Norwegian University of Science and Technology (NTNU), where I focused on applying learning methods to robotic planning and control.
 
 ## Research Interests
 
